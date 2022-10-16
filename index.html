@@ -9,7 +9,7 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
 
     <!-- Canonical -->
-    <link rel="canonical" href="https://www.example.com">
+    <link rel="canonical" href="https://www.altamens.com">
 
     <!-- Robots -->
     <!--<meta name="robots" content="noindex, nofollow">-->
@@ -22,38 +22,102 @@
     <title>Maxime Vives</title>
 
     <!-- Description -->
-    <meta name="description" content="">
+    <meta name="description" content="Alta Mens est une entreprise proposant des innovations dans le monde du full body tracking">
     <meta name="keywords" content="Maxime, Vives">
     <meta name="author" content="Maxime Vives">
 
     <!-- Social -->
     <!-- Twitter -->
     <meta name="twitter:card" content="summary">
-    <meta name=”twitter:site” content=”@yourwebsite”>
-    <meta name=”twitter:creator” content=”@yourtwitterhandle”>
-    <meta name=”twitter:title” content=”your title”> <!--70 char-->
-    <meta name=”twitter:description” content=”your Description.”> <!--200 char-->
-    <meta name=”twitter:image” content=”https://where-your-image-is-hosted/name.jpg“> <!--120x120-->
+    <meta name="twitter:site" content="https://www.altamens.com">
+    <meta name="twitter:creator" content="@Max64230">
+    <meta name="twitter:title" content="Alta Mens"> <!--70 char-->
+    <meta name="twitter:description" content="Alta Mens est une entreprise proposant des innovations dans le monde du full body tracking"> <!--200 char-->
+    <meta name="twitter:image" content="https://cesi-eat.s3.eu-west-3.amazonaws.com/logo.png"> <!--120x120-->
 
     <!-- Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.example.com">
-    <meta property="og:title" content="Quick Parcel Project — Home">
-    <meta property="og:description" content="Home description.">
-    <meta property="og:image" content="https://where-your-image-is-hosted/name.jpg">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
+    <meta property="og:title" content="Alta Mens - Home">
+    <meta property="og:description" content="Alta Mens est une entreprise proposant des innovations dans le monde du full body tracking">
+    <meta property="og:image" content="https://cesi-eat.s3.eu-west-3.amazonaws.com/logo.png">
+    <meta property="og:image:width" content="820">
+    <meta property="og:image:height" content="540">
 
     <!-- Favicon -->
-    <meta name="color-scheme" content="light dark">
-    <meta name="theme-color" media="(prefers-color-scheme: light)" content="white">
-    <meta name="theme-color" media="(prefers-color-scheme: dark)" content="black">
+    <link rel="shortcut icon" href="./asset/images/logo_A.png" type="image/x-icon">
+    <!-- <link rel="preload" href="./asset/vidéos/bande sonV2.mp4" as="video"> -->
+    <!-- <meta name="color-scheme" content="light dark"> -->
+    <!-- <meta name="theme-color" media="(prefers-color-scheme: light)" content="white">
+    <meta name="theme-color" media="(prefers-color-scheme: dark)" content="black"> -->
 
     <!--<link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fanwood+Text:ital@0;1&family=Tenor+Sans&display=swap" rel="stylesheet">-->
 </head>
 <body>
-    
+    <div class="loader">
+        <video autoplay class="v-intro">
+            <!-- <source> -->
+            <source src="./asset/vidéos/bande sonV2.mp4" type="video/mp4">
+        </video>
+    </div>
+    <div class="bg">
+        <div class="radiant"></div>
+        <div class="blur"></div>
+    </div>
+    <header>
+        <div class="logo">
+            <img src="./asset/images/logo_nude.png" alt="">
+        </div>
+        <nav>
+            <ul class="navbar">
+                <li>Home</li>
+                <li>Products</li>
+                <li>Company</li>
+                <li>About Us</li>
+            </ul>
+        </nav>
+
+        <div class="auth">
+            <a href="#" class="underline">Login</a>
+            <a href="#" class="button">Start Now</a>
+        </div>
+    </header>
+
+    <div class="hero">
+        <div class="title">
+            <h2 class="l-p">SENSES</h2>
+            <h2 class="r-p">REBIRTH</h2>
+        </div>
+        <!-- <div class="description">
+            <p>Being leader in the VR 
+                immersion… It is our duty 
+                and we keep thinking to 
+                improve your experience</p>
+        </div> -->
+
+        <!--Element flottant -->
+        <div class="statue">
+            <img src="./asset/images/statue_transp.png" alt="Statue with VR Headset">
+        </div>
+        <div class="video-presentation">
+            <span class="v-description">Find out about our latest product right now</span>
+            <video controls poster="./asset/images/pub_1.png" class="v-product">
+                <!-- <source> -->
+                <source src="./asset/vidéos/bande sonV2.mp4" type="video/mp4">
+            </video>
+        </div>
+    </div>
+
+    <script>
+        let video = document.querySelector('.v-intro');
+        video.volume = 0.1
+
+        video.onended = function(e) {
+            video.style.display = 'none'
+            video.style.zIndex = "-1000"
+        }
+    </script>
 </body>
 </html>

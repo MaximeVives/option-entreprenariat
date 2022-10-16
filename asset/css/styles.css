@@ -1,14 +1,219 @@
+/* Gilroy (light / extrabold)  */
+@font-face {
+    font-family: 'gilroyextrabold';
+    src: url('gilroy-extrabold-webfont.woff2') format('woff2'),
+         url('gilroy-extrabold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+@font-face {
+    font-family: 'gilroylight';
+    src: url('gilroy-light-webfont.woff2') format('woff2'),
+         url('gilroy-light-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    /*font-family: monospace;*/
+    font-family: "gilroylight";
+    
 }
 
 :root {
-
+    --header-horizontal-border: 30px;
 }
 
 body {
+    background-color: black;
+    color: white;
+    overflow: hidden;
+}
 
+
+/* Loader */
+.loader {
+    position: absolute;
+    right: 0;
+    top: 0;
+    min-width: 100vw; 
+    min-height: 100vh;
+    z-index: 100;
+}
+
+/* BACKGROUND */
+
+.bg .radiant {
+    position: absolute;
+    z-index: -3;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: conic-gradient(from 90deg, rgba(15, 171, 170, 0.7), rgba(15, 171, 170, 0.6),
+                            rgba(0, 0, 0, 1), rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.6),
+                            rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.6),
+                            rgba(11, 30, 30, 1), rgba(0, 0, 0, 1), rgba(15, 171, 170, 0.6),
+                            rgba(15, 171, 170, 0.7));
+    
+}
+
+.bg .blur {
+    z-index: -2;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(50px);
+}
+
+header {
+    width: 100vw;
+    height: 100px;
+    display: grid;
+    grid-template-columns: 300px auto 15%;
+    padding: 0 var(--header-horizontal-border);
+}
+
+header .logo {
+    height: inherit;
+    /* background-color: brown; */
+}
+
+header .logo img {
+    height: inherit;
+    width: auto;
+    padding: 35px 0;
+}
+
+header nav {
+    width: 100%;
+    padding: 0 100px;
+}
+
+header nav .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 100%;
+}
+
+header .navbar li {
+    list-style: none;
+    font-size: 1.3rem;
+}
+
+header .auth {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 100%;
+}
+
+header .auth a {
+    text-decoration: none;
+    color: white;
+    font-family: "Gilroyextrabold";
+    font-size: 1.2rem;
+    
+}
+
+header .auth a.underline {
+    position: relative;
+    padding-bottom: 3px;
+}
+
+header .auth a.underline:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: aliceblue;
+    transform: scaleX(0);
+    transition: transform 0.3s ease-in-out;
+    transform-origin: right;
+}
+
+header .auth a.underline:hover:after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+header .auth a.button {
+    padding: 10px 20px;
+    border: 1px solid white;
+    transition: 0.2s;
+}
+
+header .auth a.button:hover {
+    background: white;
+    color: #000;
+}
+
+
+.hero {
+    height: calc(100vh - 100px);
+    width: 100vw;
+    /* padding-top: 200px; */
+    position: relative;
+}
+
+.hero .title {
+    position: relative;
+    width: 80%;
+    height: 80%;
+    display: grid;
+    grid-template-rows: 50% 50%;
+    margin: 0 auto;
+}
+
+.hero .title .l-p {position: absolute;top: 0; left: 0;}
+.hero .title .r-p {position: absolute;bottom: 0; right: 0;}
+
+.hero .title h2 {
+    font-size: 300px;
+    font-family: "gilroyextrabold";
+}
+
+
+.hero .statue {
+    position: absolute;
+    top: 20%;
+    left: 0;
+    /* height: 60%; */
+    width: 70%;    
+}
+
+.hero .statue img{
+    object-fit: cover;
+    width: 100%;
+    height: auto;
+    transform: rotateY(180deg) translateX(400px);
+}
+
+.hero .video-presentation {
+    position: absolute;
+    top: 0;
+    right: var(--header-horizontal-border);
+    display: grid;
+    grid-template-columns: 38% 62%;
+    max-width: 500px;
+    height: 200px;
+}
+
+.hero .video-presentation video {
+    width: -webkit-fill-available;
+    height: auto;
+    border-radius: 5px;
 }
