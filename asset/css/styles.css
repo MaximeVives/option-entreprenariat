@@ -37,17 +37,6 @@ body {
     overflow: hidden;
 }
 
-
-/* Loader */
-.loader {
-    position: absolute;
-    right: 0;
-    top: 0;
-    min-width: 100vw; 
-    min-height: 100vh;
-    z-index: 100;
-}
-
 /* BACKGROUND */
 
 .bg .radiant {
@@ -216,4 +205,21 @@ header .auth a.button:hover {
     width: -webkit-fill-available;
     height: auto;
     border-radius: 5px;
+}
+
+.hero .v-playing{
+    position: fixed;
+    top:0;
+    left: 0;
+    width: 100vw;
+    max-width: 100vw;
+    height: 100vh;
+}
+
+.hero .v-playing video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: auto;
+    height: 100%;
 }

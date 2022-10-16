@@ -56,12 +56,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Fanwood+Text:ital@0;1&family=Tenor+Sans&display=swap" rel="stylesheet">-->
 </head>
 <body>
-    <div class="loader">
-        <video autoplay class="v-intro">
-            <!-- <source> -->
-            <source src="./asset/vidéos/bande sonV2.mp4" type="video/mp4">
-        </video>
-    </div>
     <div class="bg">
         <div class="radiant"></div>
         <div class="blur"></div>
@@ -111,13 +105,9 @@
     </div>
 
     <script>
-        let video = document.querySelector('.v-intro');
+        let video = document.querySelector('.v-product');
         video.volume = 0.1
-
-        video.onended = function(e) {
-            video.style.display = 'none'
-            video.style.zIndex = "-1000"
-        }
+        
     </script>
 </body>
 </html>
