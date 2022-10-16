@@ -1,0 +1,14 @@
+{
+  "name": "My PWA",
+  "icons": [
+    {
+      "src": "https://via.placeholder.com/144/fc7519",
+      "sizes": "144x144",
+      "type": "image/png"
+    }
+  ],
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#fc7519",
+  "theme_color": "#fc7519"
+}
